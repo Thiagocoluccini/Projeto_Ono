@@ -10,15 +10,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
-body{
-    background-size: 200%;
-    background-color: rgb(195, 189, 189);
-    color: black;
-    transition: background 0.2s linear;
 
-}
-
-body.dark {
+body {
 
     background-size: 200%;
     background-image: linear-gradient(70deg, #121925, #041b3a, #001b4f, #001961, #141071);
