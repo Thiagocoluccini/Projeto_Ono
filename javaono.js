@@ -73,7 +73,7 @@ main.appendChild(inicio);
 const texto_inicio = document.createElement('p');
 texto_inicio.classList.add('paragrafo');
 inicio.appendChild(texto_inicio);
-texto_inicio.innerHTML = 'Esse site possui o intuito de mostrar os maiores guitarristas do Brasil e fornecer o preço dos seus equipamentos.';
+texto_inicio.innerHTML = 'Esse site possui o intuito de mostrar os maiores guitarristas do Brasil e mostrar seus melhores albuns, ao clicar no icone, irá ser direcionado a uma playlist direta do album.';
 
 const guitarra = document.createElement('section');
 main.appendChild(guitarra);
