@@ -4,26 +4,39 @@
     box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital@1&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
+.remove{
+    display: none;
+}
+
 
 body {
 
     background-size: 200%;
-    background-image: linear-gradient(70deg, #121925, #041b3a, #001b4f, #001961, #141071);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgb(207, 145, 10) 100%);
     color: ghostwhite;
 
 
 }
 
+body.dark{
+    background: linear-gradient(0deg, rgba(68,147,148,1) 0%, rgba(13,12,11,1) 100%);
+    color:var(--text-color1);
+    color: ghostwhite;
+    
+    
+}
+
 
 .menu {
     background-color: aliceblue;
-    position: fixed;
     justify-content:center;
     width: 100%;
     padding: 10px;
@@ -109,7 +122,6 @@ body {
 
 .imagem_trabalho {
     width: 20%;
-    /* padding-left: 50px; */
     padding-top: 40px;
     margin-right: 10px;
     margin-left: 50px;
@@ -131,16 +143,18 @@ body {
 a {
     text-decoration: none;
     color: purple;
+
 }
 
 .botao {
 
+    background-color: rgb(181, 32, 32);
     width: 50px;
-    background-color: red;
+    height: 50px;
+    font-size: 40px;
     justify-content: center;
     display: flex;
-    margin-right: 400px;
-
+    color: rgb(44, 2, 85);
 
 }
 
@@ -150,44 +164,48 @@ a {
     margin-right: 50px;
     align-items: center;
     padding: 20px 20px 20px 20px;
+    color: rgb(70, 4, 56);
 
 }
 
-.checkbox {
-    opacity: 0;
-    position: absolute;
-  }
-  
-  .label {
-    background-color: #111;
-    border-radius: 50px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  
-    padding: 5px;
+.footer {
+
+    background-color: rgb(10, 125, 27);
+    width: 100%;
+    padding-bottom: 100px;
     position: relative;
-    height: 26px;
-    width: 50px;
-    transform: scale(1.5);
-  
-  }
-  
-  
-  .label .ball {
-    background-color: #fff;
-    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    opacity: 80%;
+}
+
+.texto_footer {
+
+    height: -50%;
+    margin: 0;
     position: absolute;
-    top: 2px;
-    left: 2px;
-    height: 22px;
-    width: 22px;
-    transform: translateX(0px);
-    transition: transform 0.2s linear;
-  }
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+}
   
-  .checkbox:checked + .label .ball {
-    transform: translateX(24px);
-  }
-  
+.topo {
+    width: 95%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: end;
+    text-align: end;
+
+
+}
+
+#label{
+    margin: 0;
+}
+
+#chk {
+    cursor: pointer;
+
+}

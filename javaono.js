@@ -1,3 +1,4 @@
+
 const body = document.querySelector('body');
 
 const mainContainer = document.createElement('div');
@@ -19,45 +20,46 @@ const volt_inicio = document.createElement('a');
 volt_inicio.href = '#';
 menu.appendChild(volt_inicio);
 volt_inicio.innerHTML = 'Home';
+volt_inicio.onclick = start;
 volt_inicio.classList.add('opcoes');
 
 const sobre = document.createElement('a');
 sobre.href = '#';
 menu.appendChild(sobre);
-sobre.innerHTML = 'Sobre';
+sobre.innerHTML = 'Edu Ardanuy';
 sobre.classList.add('opcoes');
+sobre.onclick = edu;
 
 const preco = document.createElement('a');
 preco.href = '#';
 menu.appendChild(preco);
-preco.innerHTML = 'Consultar preços';
+preco.innerHTML = 'Kiko Loureiro';
 preco.classList.add('opcoes');
+preco.onclick = kiko;
 
-const voltar_topo = document.createElement('a');
-voltar_topo.href = '#';
-menu.appendChild(voltar_topo);
-voltar_topo.innerHTML = '&#9650';
-voltar_topo.classList.add('botao');
+const divi_dark = document.createElement('div');
+menu.appendChild(divi_dark);
+divi_dark.classList.add('divi_dark');
 
-const checkbox = document.createElement('input');
-checkbox.id = 'chk';
-checkbox.type = 'checkbox';
-checkbox.classList.add('checkbox');
-menu.appendChild(checkbox);
+const dark = document.createElement('input');
+dark.type = 'checkbox';
+dark.id = 'chk';
+dark.classList.add('checkbox');
+divi_dark.appendChild(dark);
 
 const label = document.createElement('label');
 label.for = 'chk';
-label.classList.add('label');
-menu.appendChild(label);
+label.id = 'label';
+label.classList.add('opcoes');
+label.innerHTML = 'DARK/LIGHT';
+divi_dark.appendChild(label);
 
-const bola = document.createElement('div');
-bola.classList.add('ball');
-label.appendChild(bola);
 
-const chk = document.getElementById('chk');
 
-chk.addEventListener('change', () => {
-  document.body.classList.toggle('dark')
+
+dark.addEventListener('change', () => {
+ // document.body.classList.toggle('dark')
+    body.classList.toggle('dark');
 })
 
 const main = document.createElement('main');
@@ -89,6 +91,7 @@ titulo_guitarra.innerHTML = 'Guitarristas';
 const kiko_loureiro = document.createElement('div');
 main.appendChild(kiko_loureiro);
 guitarra.appendChild(kiko_loureiro);
+kiko_loureiro.id = 'kiko_div';
 kiko_loureiro.classList.add('teste');
 
 // KIKO LOUREIRO APRESENTAÇÃO
@@ -162,6 +165,7 @@ const edu_ardanuy = document.createElement('div');
 main.appendChild(edu_ardanuy);
 guitarra.appendChild(edu_ardanuy);
 edu_ardanuy.classList.add('teste');
+edu_ardanuy.id = 'edu';
 
 // KIKO LOUREIRO APRESENTAÇÃO
 
@@ -226,6 +230,56 @@ imagem_animal.src = 'https://images-americanas.b2w.io/produtos/2485408011/imagen
 animal.appendChild(imagem_animal);
 imagem_animal.classList.add('imagem_trabalho');
 
+const voltar_topo = document.createElement('div');
+voltar_topo.innerHTML = '<a href = "#" class = "botao"> &#9650 </a>';
+main.appendChild(voltar_topo);
+voltar_topo.classList.add('topo');
+
+const footer = document.createElement('footer');
+main.appendChild(footer);
+footer.innerHTML = '<p class = "texto_footer">Todos os direitos reservados - Unisal Campinas</p>';
+footer.classList.add('footer');
+
+start();
+
+function edu(){
+
+    //document.getElementById('edu').toggle('');
+
+    if(document.getElementById('edu').style.display == 'none'){
+        divKiko = document.getElementById('kiko_div');
+        divEdu = document.getElementById('edu');
+    
+        divKiko.style.display = 'none';
+        divEdu.style.display = 'flex';
+      //  divKiko = document.getElementById('kiko_div');
+      //  divKiko.classList.toggle('remove');
+    }
 
 
+
+
+
+}
+
+function kiko(){
+    if(document.getElementById('kiko_div').style.display == 'none'){
+        divKiko = document.getElementById('kiko_div');
+        divEdu = document.getElementById('edu');
+    
+        divKiko.style.display = 'flex';
+        divEdu.style.display = 'none';
+      //  divKiko = document.getElementById('kiko_div');
+      //  divKiko.classList.toggle('remove');
+    }
+
+}
+
+function start(){
+    divKiko = document.getElementById('kiko_div');
+    divEdu = document.getElementById('edu');
+
+    divKiko.style.display = 'none';
+    divEdu.style.display = 'none';
+}
 
